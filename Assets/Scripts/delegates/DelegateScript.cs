@@ -19,17 +19,19 @@ public class DelegateScript : MonoBehaviour
 	void Start () 
 	{
 
-		// we laten de delegate variabele refereren naar de functie GoRight
-		MoveGameObject = MoveLeft;
+        // we laten de delegate variabele refereren naar de functie GoRight
+        MoveGameObject += MoveLeft;
 
-		// en we roepen de delegate aan
-		MoveGameObject(100);
+        // en we roepen de delegate aan
+        MoveGameObject(100);
 
-		// we laten de delegate variabele refereren naar de functie GoLeft
-		MoveGameObject = MoveRight;
+        // we laten de delegate variabele refereren naar de functie GoLeft
+        MoveGameObject += MoveRight;
 
-		// en we roepen de delegate aan
-		MoveGameObject(89);
+        MoveGameObject -= MoveLeft;
+
+        // en we roepen de delegate aan
+        MoveGameObject(89);
 	}
 
 	void MoveLeft(int speed){
